@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mais Grup | Yaşamın Ötesine</title>
+<meta name="description" content="Mais Grup A.Ş. — İstanbul'da depreme dayanıklı, zamanında teslim edilen konut ve villa projeleri. Devam eden ve tamamlanan projelerimizi inceleyin.">
+<meta property="og:title" content="Mais Grup | Yaşamın Ötesine">
+<meta property="og:description" content="Sağlam temeller, şeffaf süreç, zamanında teslim.">
+<meta property="og:image" content="https://www.maisgrup.com/wp-content/uploads/2024/07/YARIMBURGAZ-KONAK-1000x769.jpeg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Projeleriniz depreme dayanıklı mı?","acceptedAnswer":{"@type":"Answer","text":"Evet. Tüm projeler 2018 Türkiye Bina Deprem Yönetmeliği'ne göre tasarlanır ve bağımsız yapı denetiminden geçer."}},
+{"@type":"Question","name":"Tapu ne zaman verilir?","acceptedAnswer":{"@type":"Answer","text":"Satışta kat irtifaklı tapu verilir. İskân alındıktan sonra kat mülkiyetine geçilir."}},
+{"@type":"Question","name":"Konut kredisi kullanabilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Evet. Anlaşmalı bankalarla kredi sürecinde size yardımcı oluyoruz."}},
+{"@type":"Question","name":"Yabancılar satın alabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Evet. Yabancı uyruklu alıcılara tapu ve resmi işlemlerde destek veriyoruz."}}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1E2A32;        /* derin arduvaz: güven, istikrar */
+  --ink-2:#2C3A44;
+  --graphite:#6E7378;   /* logodaki gri */
+  --muted:#5B6268;
+  --stone:#F5F2EC;      /* sıcak taş zemin: sakin, göz yormaz */
+  --paper:#FFFFFF;
+  --line:#E4DED4;
+  --accent:#B8743A;     /* logodaki turuncunun yumuşatılmış bakır tonu */
+  --accent-d:#9A5F2E;
+  --accent-soft:#F3E7DA;
+  --sage:#5F7A6B;       /* güvenlik / teslim edildi */
+  --sage-soft:#E3EBE5;
+  --radius:18px;
+  --shadow:0 1px 2px rgba(30,42,50,.06),0 12px 32px -12px rgba(30,42,50,.18);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--stone);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.serif{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:300;color:var(--accent)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-d)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em;font-weight:700}
+h2{font-size:clamp(30px,4vw,46px);margin:14px 0 16px}
+.lead{color:var(--muted);font-size:18px;max-width:620px}
+section{padding:110px 0}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:15px;transition:.25s;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-d);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink-2)}
+.arrow{transition:transform .25s}.btn:hover .arrow{transform:translateX(4px)}
+
+/* NAV */
+.nav{position:fixed;inset:16px 16px auto;z-index:50;transition:.3s}
+.nav-in{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 22px;border-radius:999px;background:rgba(30,42,50,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);transition:.3s}
+.nav.scrolled .nav-in{background:rgba(255,255,255,.88);border-color:var(--line);box-shadow:var(--shadow)}
+.logo img{height:38px;width:auto;filter:brightness(0) invert(1);transition:.3s}
+.nav.scrolled .logo img{filter:none}
+.menu{display:flex;gap:4px;list-style:none}
+.menu a{padding:9px 16px;border-radius:999px;font-size:14.5px;font-weight:500;color:#fff;transition:.2s}
+.menu a:hover{background:rgba(255,255,255,.12)}
+.nav.scrolled .menu a{color:var(--ink)}
+.nav.scrolled .menu a:hover{background:var(--stone)}
+.nav-r{display:flex;align-items:center;gap:10px}
+.lang{font-size:13px;font-weight:600;color:#fff;opacity:.85;padding:8px}
+.nav.scrolled .lang{color:var(--ink)}
+.nav .btn{padding:11px 20px;font-size:14px}
+.burger{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;padding:6px 10px}
+.nav.scrolled .burger{color:var(--ink)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:0 0 70px;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://www.maisgrup.com/wp-content/uploads/2024/07/YARIMBURGAZ-KONAK-1000x769.jpeg') center/cover;transform:scale(1.08);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,42,50,.55) 0%,rgba(30,42,50,.25) 40%,rgba(30,42,50,.92) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1.4fr .8fr;gap:48px;align-items:end}
+.hero h1{font-size:clamp(42px,6.4vw,84px);font-weight:700;letter-spacing:-.035em;margin:18px 0 22px}
+.hero h1 .serif{color:#E7B98C}
+.hero p{font-size:19px;max-width:540px;opacity:.88;margin-bottom:34px}
+.hero .eyebrow{color:#E7B98C}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.live{background:rgba(255,255,255,.1);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:22px}
+.live-h{display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.9}
+.dot{width:8px;height:8px;border-radius:50%;background:#7FC29B;box-shadow:0 0 0 0 rgba(127,194,155,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(127,194,155,0)}100%{box-shadow:0 0 0 0 rgba(127,194,155,0)}}
+.live h4{font-size:20px;margin:12px 0 4px}
+.live small{opacity:.75}
+.bar{height:6px;background:rgba(255,255,255,.18);border-radius:9px;margin:16px 0 8px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#E7B98C,var(--accent));border-radius:9px;width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.live-f{display:flex;justify-content:space-between;font-size:13px;opacity:.85}
+.scroll-hint{position:absolute;left:50%;bottom:22px;z-index:2;transform:translateX(-50%);font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.6;color:#fff}
+
+/* TRUST STRIP */
+.trust{background:var(--ink);color:#fff;padding:0}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-i{display:flex;gap:14px;align-items:center;padding:28px 22px;border-right:1px solid rgba(255,255,255,.08)}
+.trust-i:last-child{border-right:0}
+.ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(231,185,140,.12);color:#E7B98C}
+.ic svg{width:22px;height:22px}
+.trust-i b{display:block;font-size:15px}
+.trust-i span{font-size:13px;opacity:.65}
+
+/* PROJECTS */
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:44px}
+.filters{display:flex;gap:6px;background:var(--paper);padding:6px;border-radius:999px;border:1px solid var(--line)}
+.filters button{border:0;background:none;padding:10px 18px;border-radius:999px;font:600 14px Manrope,sans-serif;color:var(--muted);cursor:pointer;transition:.2s}
+.filters button.on{background:var(--ink);color:#fff}
+.grid-p{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.card{grid-column:span 2;background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:.35s;display:flex;flex-direction:column}
+.card.big{grid-column:span 3}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card.hide{display:none}
+.card-img{position:relative;aspect-ratio:4/3;overflow:hidden}
+.card.big .card-img{aspect-ratio:16/10}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover .card-img img{transform:scale(1.06)}
+.chip{position:absolute;top:14px;left:14px;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;background:rgba(255,255,255,.92);backdrop-filter:blur(6px)}
+.chip.ongoing{color:var(--accent-d)}.chip.done{color:var(--sage)}.chip.soon{color:var(--ink)}
+.chip::before{content:"●";margin-right:6px;font-size:9px;vertical-align:2px}
+.card-b{padding:22px;flex:1;display:flex;flex-direction:column}
+.card-b small{color:var(--graphite);font-size:13px;display:flex;align-items:center;gap:6px}
+.card-b h3{font-size:21px;margin:6px 0 12px}
+.meta{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.meta b{color:var(--ink);font-weight:700}
+.pbar{height:5px;border-radius:9px;background:var(--stone);margin:2px 0 14px;overflow:hidden}
+.pbar i{display:block;height:100%;background:var(--accent);border-radius:9px}
+
+/* FAQ */
+.faq-s{background:var(--paper)}
+.faq-g{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:17px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:300;color:var(--accent);transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{color:var(--muted);padding:0 40px 20px 0;font-size:15.5px}
+
+/* ABOUT */
+.about{background:var(--stone)}
+.about{background:var(--paper)}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{position:relative}
+.about-img img{border-radius:var(--radius);aspect-ratio:4/5;object-fit:cover;width:100%}
+.badge-yr{position:absolute;right:-24px;bottom:40px;background:var(--accent);color:#fff;padding:24px 28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.badge-yr b{font-size:48px;line-height:1;display:block}
+.tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);margin:28px 0 20px}
+.tabs button{background:none;border:0;padding:12px 0;font:600 15px Manrope,sans-serif;color:var(--graphite);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button.on{color:var(--ink);border-color:var(--accent)}
+.tabp{display:none;color:var(--muted)}.tabp.on{display:block}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:80px;padding-top:50px;border-top:1px solid var(--line)}
+.stat b{font-size:clamp(38px,4vw,54px);font-weight:700;letter-spacing:-.03em;display:block;line-height:1}
+.stat b em{font-style:normal;color:var(--accent)}
+.stat span{color:var(--muted);font-size:14px}
+
+/* SAFETY BENTO */
+#guven{background:var(--paper)}
+#guven .bx:not(.dark):not(.sage){background:var(--stone)}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(200px,auto);gap:20px;margin-top:50px}
+.bx{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.bx h3{font-size:21px;margin-bottom:8px}
+.bx p{color:var(--muted);font-size:15px}
+.bx.dark{background:var(--ink);color:#fff;grid-row:span 2}
+.bx.dark p{color:rgba(255,255,255,.7)}
+.bx.sage{background:var(--sage-soft);border-color:transparent}
+.bx.wide{grid-column:span 2}
+.bx .ic{background:var(--accent-soft);color:var(--accent-d)}
+.bx.dark .ic{background:rgba(231,185,140,.14);color:#E7B98C}
+.bx.sage .ic{background:#fff;color:var(--sage)}
+.layers{display:flex;flex-direction:column;gap:8px}
+.layers div{display:flex;justify-content:space-between;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.06);font-size:14px}
+.layers div span{color:#E7B98C;font-weight:600}
+
+/* PROGRESS TRACKER */
+.tracker{background:var(--ink);color:#fff}
+.tracker .lead{color:rgba(255,255,255,.7)}
+.tracker .eyebrow{color:#E7B98C}
+.trk{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;margin-top:50px;align-items:start}
+.trk-sel{display:flex;flex-direction:column;gap:10px}
+.trk-sel button{text-align:left;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#fff;padding:18px 20px;border-radius:14px;cursor:pointer;font:inherit;display:flex;justify-content:space-between;align-items:center;transition:.2s}
+.trk-sel button.on{background:rgba(231,185,140,.1);border-color:#E7B98C}
+.trk-sel button b{font-weight:600}
+.trk-sel button span{font-size:13px;opacity:.7}
+.steps{list-style:none;position:relative;padding-left:34px}
+.steps::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:rgba(255,255,255,.12)}
+.steps li{position:relative;padding:0 0 26px}
+.steps li::before{content:"";position:absolute;left:-29px;top:4px;width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,.3);background:var(--ink)}
+.steps li.ok::before{background:#7FC29B;border-color:#7FC29B}
+.steps li.now::before{background:#E7B98C;border-color:#E7B98C;box-shadow:0 0 0 6px rgba(231,185,140,.18)}
+.steps b{display:block}
+.steps small{opacity:.6}
+.trk-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:30px}
+.trk-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;gap:16px;flex-wrap:wrap}
+.trk-top h3{font-size:24px}
+.ring{--p:0;width:86px;height:86px;border-radius:50%;background:conic-gradient(#E7B98C calc(var(--p)*1%),rgba(255,255,255,.1) 0);display:grid;place-items:center;transition:--p 1s}
+.ring span{width:68px;height:68px;border-radius:50%;background:var(--ink);display:grid;place-items:center;font-weight:700;font-size:18px}
+
+/* PROCESS */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:50px;counter-reset:s}
+.proc div{padding:28px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line);counter-increment:s}
+.proc div::before{content:"0" counter(s);font-family:Fraunces,serif;font-style:italic;font-size:40px;color:var(--accent);display:block;margin-bottom:14px;font-weight:300}
+.proc h3{font-size:18px;margin-bottom:8px}
+.proc p{font-size:14.5px;color:var(--muted)}
+
+/* GROUP MARQUEE */
+.group{padding:70px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.group p{text-align:center;color:var(--graphite);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:30px}
+.mq{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq-t{display:flex;gap:80px;width:max-content;animation:mq 30s linear infinite;align-items:center}
+.mq-t img{height:44px;width:auto;filter:grayscale(1);opacity:.65;transition:.3s}
+.mq-t img:hover{filter:none;opacity:1}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* FOUNDERS */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.member{background:var(--paper);border-radius:var(--radius);border:1px solid var(--line);overflow:hidden}
+.member .ph{aspect-ratio:1/1;background:linear-gradient(135deg,#E9E3D9,#D9D1C4);display:grid;place-items:center;color:var(--graphite);font-size:13px}
+.member div:last-child{padding:20px}
+.member h3{font-size:18px}
+.member span{font-size:14px;color:var(--muted)}
+
+/* BLOG */
+.blog{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.post{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:.3s}
+.post:hover{box-shadow:var(--shadow)}
+.post img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.post div{padding:22px}
+.post small{color:var(--accent-d);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.post h3{font-size:18px;margin-top:8px}
+
+/* CONTACT */
+.contact{background:var(--ink);color:#fff}
+.contact .lead{color:rgba(255,255,255,.7)}
+.contact .eyebrow{color:#E7B98C}
+.ct-g{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;margin-top:40px}
+.ct-info{display:flex;flex-direction:column;gap:14px}
+.ct-info a,.ct-info div{display:flex;gap:16px;align-items:center;padding:18px 20px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transition:.2s}
+.ct-info a:hover{border-color:#E7B98C}
+.ct-info small{display:block;opacity:.6;font-size:12px}
+.map{border-radius:14px;overflow:hidden;height:220px;border:1px solid rgba(255,255,255,.08)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.6) contrast(.95)}
+form{background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .full{grid-column:span 2}
+form label{font-size:13px;font-weight:600;display:block;margin-bottom:6px}
+form input,form select,form textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font:inherit;font-size:15px;background:var(--stone);transition:.2s}
+form input:focus,form select:focus,form textarea:focus{outline:0;border-color:var(--accent);background:#fff}
+form .kvkk{font-size:12.5px;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
+form .kvkk input{width:auto;margin-top:3px}
+
+footer{background:#172128;color:rgba(255,255,255,.65);padding:70px 0 30px;font-size:14px}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ft img{height:44px;width:auto;filter:brightness(0) invert(1);opacity:.9;margin-bottom:18px}
+.ft h4{color:#fff;font-size:14px;margin-bottom:16px}
+.ft ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ft a:hover{color:#E7B98C}
+.fb{display:flex;justify-content:space-between;padding-top:24px;flex-wrap:wrap;gap:10px;font-size:13px}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.5);transition:.25s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:28px;height:28px;fill:#fff}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .menu,.lang,.nav .btn{display:none}.burger{display:block}
+  .nav.open .menu{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:#fff;padding:14px;border-radius:20px;box-shadow:var(--shadow)}
+  .nav.open .menu a{color:var(--ink)}
+  .hero .wrap,.about-g,.trk,.ct-g,.faq-g{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust-i:nth-child(2){border-right:0}
+  .card,.card.big{grid-column:span 3}
+  .stats,.proc{grid-template-columns:1fr 1fr}
+  .bento{grid-template-columns:1fr 1fr}.bx.dark{grid-row:auto}
+  .team,.blog{grid-template-columns:1fr 1fr}
+  .ft{grid-template-columns:1fr 1fr}
+  .badge-yr{right:16px}
+}
+@media (max-width:640px){
+  section{padding:80px 0}
+  .wrap{padding:0 16px}
+  .trust .wrap,.stats,.proc,.bento,.team,.blog,.ft{grid-template-columns:1fr}
+  .bx.wide{grid-column:auto}
+  .trust-i{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .card,.card.big{grid-column:span 6}
+  .filters{overflow-x:auto;max-width:100%}
+  form{grid-template-columns:1fr;padding:24px}form .full{grid-column:auto}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#" class="logo" aria-label="Mais Grup ana sayfa"><img src="assets/logo.png" alt="Mais Grup A.Ş. logosu"></a>
+    <ul class="menu" id="menu">
+      <li><a href="#projeler">Projeler</a></li>
+      <li><a href="#sss">SSS</a></li>
+      <li><a href="#hakkimizda">Kurumsal</a></li>
+      <li><a href="#guven">Güvenlik &amp; Kalite</a></li>
+      <li><a href="#ilerleme">İnşaat Takibi</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+    <div class="nav-r">
+      <a href="#" class="lang">TR / EN</a>
+      <a href="#iletisim" class="btn btn-primary">Bilgi Alın</a>
+      <button class="burger" aria-label="Menü" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- 1. HERO: tek mesaj + tek ana CTA + canlı güven kanıtı -->
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Yarımburgaz Konak projesi"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">2009'dan beri İstanbul</span>
+      <h1>Hayallerinizi <span class="serif">sağlam temeller</span> üzerine inşa ediyoruz.</h1>
+      <p>Depreme dayanıklı yapılar. Zamanında teslim.</p>
+      <div class="cta-row">
+        <a href="#projeler" class="btn btn-primary">Projeleri Keşfedin <span class="arrow">→</span></a>
+        <a href="#iletisim" class="btn btn-ghost">Randevu Oluşturun</a>
+      </div>
+    </div>
+    <aside class="live">
+      <div class="live-h"><span class="dot"></span> Şu an inşa ediliyor</div>
+      <h4>Yenimahalle Toplu Konut</h4>
+      <small>Kaba inşaat · Son güncelleme: 3 gün önce</small>
+      <div class="bar"><i data-w="68"></i></div>
+      <div class="live-f"><span>%68 tamamlandı</span><span>Teslim: Haz 2027</span></div>
+    </aside>
+  </div>
+  <div class="scroll-hint">Kaydırın</div>
+</section>
+
+<!-- 2. GÜVEN ŞERİDİ: ilk 5 saniyede "güvenli" hissi -->
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-i"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><b>TBDY 2018 uyumlu</b><span>Deprem yönetmeliğine tam uyum</span></div></div>
+    <div class="trust-i"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Zamanında teslim</b><span>Sözleşmedeki tarihe sadakat</span></div></div>
+    <div class="trust-i"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/></svg></div><div><b>Bağımsız yapı denetimi</b><span>Her aşamada raporlanır</span></div></div>
+    <div class="trust-i"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12h8M12 8v8"/></svg></div><div><b>Teslim sonrası destek</b><span>Garanti &amp; servis hattı</span></div></div>
+  </div>
+</section>
+
+<!-- 3. PROJELER: ziyaretçinin asıl geliş nedeni, en üstte -->
+<section id="projeler">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow">Projelerimiz</span>
+        <h2>Her biri bir <span class="serif">yaşam alanı</span></h2>
+      </div>
+      <div class="filters" role="tablist">
+        <button class="on" data-f="all">Tümü</button>
+        <button data-f="ongoing">Devam Eden</button>
+        <button data-f="done">Tamamlanan</button>
+        <button data-f="soon">Yakında</button>
+      </div>
+    </div>
+    <div class="grid-p">
+      <article class="card big reveal" data-s="ongoing">
+        <div class="card-img"><img src="https://www.maisgrup.com/wp-content/uploads/2024/07/YENIMAHALLE-PROJE-1000x766.jpeg" alt="Yenimahalle Toplu Konut Projesi görseli" loading="lazy"><span class="chip ongoing">Devam Ediyor</span></div>
+        <div class="card-b"><small>📍 Yenimahalle, İstanbul</small><h3>Yenimahalle Toplu Konut</h3>
+          <div class="pbar"><i style="width:68%"></i></div>
+          <div class="meta"><span><b>%68</b> ilerleme</span><span><b>120</b> konut</span><span>Teslim <b>2027</b></span></div></div>
+      </article>
+      <article class="card big reveal" data-s="ongoing">
+        <div class="card-img"><img src="https://www.maisgrup.com/wp-content/uploads/2024/07/1-21-1000x563.jpeg" alt="Şamlar Özel Malikane Projesi görseli" loading="lazy"><span class="chip ongoing">Devam Ediyor</span></div>
+        <div class="card-b"><small>📍 Şamlar, Başakşehir</small><h3>Şamlar Özel Malikane</h3>
+          <div class="pbar"><i style="width:42%"></i></div>
+          <div class="meta"><span><b>%42</b> ilerleme</span><span><b>Müstakil</b> malikane</span><span>Teslim <b>2027</b></span></div></div>
+      </article>
+      <article class="card reveal" data-s="done">
+        <div class="card-img"><img src="https://www.maisgrup.com/wp-content/uploads/2024/07/CENNET-1000x800.jpeg" alt="Barbaros Yüzyıl Apartmanı görseli" loading="lazy"><span class="chip done">Teslim Edildi</span></div>
+        <div class="card-b"><small>📍 Barbaros, İstanbul</small><h3>Barbaros Yüzyıl Apartmanı</h3>
+          <div class="meta"><span><b>24</b> daire</span><span>Teslim <b>2023</b></span></div></div>
+      </article>
+      <article class="card reveal" data-s="done">
+        <div class="card-img"><img src="https://www.maisgrup.com/wp-content/uploads/2024/07/YARIMBURGAZ-KONAK-1000x769.jpeg" alt="Yarımburgaz Villa Projesi görseli" loading="lazy"><span class="chip done">Teslim Edildi</span></div>
+        <div class="card-b"><small>📍 Yarımburgaz, Başakşehir</small><h3>Yarımburgaz Villa</h3>
+          <div class="meta"><span><b>Villa</b></span><span>Teslim <b>2024</b></span></div></div>
+      </article>
+      <article class="card reveal" data-s="soon">
+        <div class="card-img"><img src="https://www.maisgrup.com/wp-content/uploads/2024/07/SAMLAR-1-1000x562.jpg" alt="Şamlar Ana Villa Projesi görseli" loading="lazy"><span class="chip soon">Yakında Satışta</span></div>
+        <div class="card-b"><small>📍 Şamlar, Başakşehir</small><h3>Şamlar Ana Villa</h3>
+          <div class="meta"><span>Ön talep <b>açık</b></span><span>Başlangıç <b>2027</b></span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SSS: projeleri gören alıcının aklındaki ilk sorular -->
+<section class="faq-s" id="sss">
+  <div class="wrap faq-g">
+    <div class="reveal">
+      <span class="eyebrow">Sık Sorulan Sorular</span>
+      <h2>Aklınızdaki <span class="serif">sorular</span></h2>
+      <p class="lead">Cevabını bulamazsanız bize yazın.</p>
+      <div class="cta-row" style="margin-top:24px"><a href="#iletisim" class="btn btn-dark">Soru Sorun <span class="arrow">→</span></a></div>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Projeleriniz depreme dayanıklı mı?</summary><p>Evet. Tüm projeler 2018 Türkiye Bina Deprem Yönetmeliği'ne göre tasarlanır ve bağımsız yapı denetiminden geçer.</p></details>
+      <details><summary>Tapu ne zaman verilir?</summary><p>Satışta kat irtifaklı tapu verilir. İskân alındıktan sonra kat mülkiyetine geçilir.</p></details>
+      <details><summary>Konut kredisi kullanabilir miyim?</summary><p>Evet. Anlaşmalı bankalarla kredi sürecinde size yardımcı oluyoruz.</p></details>
+      <details><summary>Taksitli ödeme var mı?</summary><p>Evet. Peşinat ve vade projeye göre belirlenir, sözleşmede yazılı olarak yer alır.</p></details>
+      <details><summary>Teslim tarihi kesin mi?</summary><p>Teslim tarihi sözleşmede yazılıdır. İnşaatın durumunu sitemizden adım adım izleyebilirsiniz.</p></details>
+      <details><summary>Teslimden sonra garanti var mı?</summary><p>Yasal garantinin yanında teslim sonrası destek ekibimiz arızalarla ilgilenir.</p></details>
+      <details><summary>Yabancılar satın alabilir mi?</summary><p>Evet. Yabancı uyruklu alıcılara tapu ve resmi işlemlerde destek veriyoruz.</p></details>
+      <details><summary>Daireyi görmeden önce inceleyebilir miyim?</summary><p>Evet. Ofisimizde ya da şantiyede randevuyla gezebilirsiniz.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 5. HAKKIMIZDA: projeleri gördükten sonra "kim bunlar?" sorusu -->
+<section class="about" id="hakkimizda">
+  <div class="wrap">
+    <div class="about-g">
+      <div class="about-img reveal">
+        <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=1000&q=80" alt="Açık mavi gökyüzü önünde beyaz cepheli modern yüksek bina" loading="lazy">
+        <div class="badge-yr"><b>17</b>yıllık tecrübe</div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Hakkımızda</span>
+        <h2>Mühendislikte titizlik, <span class="serif">yaşamda estetik</span></h2>
+        <p class="lead">Tasarımdan anahtar teslime her aşama tek çatı altında.</p>
+        <div class="tabs">
+          <button class="on" data-t="0">Misyon</button><button data-t="1">Vizyon</button><button data-t="2">Değerlerimiz</button>
+        </div>
+        <div class="tabp on">Hayalleri güvenli ve modern yapılara dönüştürmek.</div>
+        <div class="tabp">Sürdürülebilir projelerle Türkiye'nin öncü markalarından biri olmak.</div>
+        <div class="tabp">Kalite · Güven · Estetik · Müşteri memnuniyeti · Sürdürülebilirlik · Titizlik</div>
+        <div class="cta-row" style="margin-top:30px"><a href="#kurucular" class="btn btn-dark">Kurucularımız <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b><span data-c="17">0</span><em>+</em></b><span>Yıllık deneyim</span></div>
+      <div class="stat reveal"><b><span data-c="35">0</span><em>+</em></b><span>Tamamlanan proje</span></div>
+      <div class="stat reveal"><b><span data-c="1200">0</span><em>+</em></b><span>Mutlu aile</span></div>
+      <div class="stat reveal"><b><span data-c="4">0</span></b><span>Grup şirketi</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. GÜVEN & KALİTE: Türkiye'de en büyük satın alma kaygısı = deprem -->
+<section id="guven">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Güvenlik &amp; Kalite</span>
+      <h2>Göremediğiniz yerde de <span class="serif">sağlam</span></h2>
+    </div>
+    <div class="bento">
+      <div class="bx dark reveal">
+        <div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V10l7-6 7 6v11"/></svg></div></div>
+        <div><h3>Temelden çatıya güvenlik</h3><p>Raporlar her proje sayfasında.</p></div>
+        <div class="layers">
+          <div>Zemin etüdü raporu <span>✓</span></div>
+          <div>Radye temel / fore kazık <span>✓</span></div>
+          <div>C35+ hazır beton &amp; numune testleri <span>✓</span></div>
+          <div>Yapı denetim raporları <span>✓</span></div>
+        </div>
+      </div>
+      <div class="bx wide reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/></svg></div>
+        <div><h3>Deprem yönetmeliğine tam uyum</h3><p>TBDY 2018'e göre tasarım, bağımsız kontrol.</p></div>
+      </div>
+      <div class="bx sage reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z"/><path d="M5 19l7-7"/></svg></div>
+        <div><h3>Sürdürülebilir yapı</h3><p>Yalıtım, enerji verimliliği, yeşil alan.</p></div>
+      </div>
+      <div class="bx reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+        <div><h3>Seçkin malzeme</h3><p>Sertifikalı, markası belli.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. İNŞAAT TAKİBİ: yenilikçi özellik, şeffaflık = güven -->
+<section class="tracker" id="ilerleme">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Canlı İnşaat Takibi</span>
+      <h2>Evinizin yükselişini <span class="serif">adım adım</span> izleyin</h2>
+    </div>
+    <div class="trk">
+      <div class="trk-sel reveal" id="trkSel">
+        <button class="on" data-i="0"><b>Yenimahalle Toplu Konut</b><span>%68</span></button>
+        <button data-i="1"><b>Şamlar Özel Malikane</b><span>%42</span></button>
+        <button data-i="2"><b>Şamlar Ana Villa</b><span>%5</span></button>
+      </div>
+      <div class="trk-card reveal">
+        <div class="trk-top"><div><small style="opacity:.6">Seçili proje</small><h3 id="trkName">Yenimahalle Toplu Konut</h3></div><div class="ring" id="ring"><span id="ringT">%68</span></div></div>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SÜREÇ: alıcının aklındaki "nasıl ilerler?" sorusu -->
+<section>
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Satın Alma Süreci</span><h2>Dört adımda <span class="serif">yeni eviniz</span></h2></div>
+    <div class="proc">
+      <div class="reveal"><h3>Tanışma</h3><p>İhtiyacınızı birlikte belirleyelim.</p></div>
+      <div class="reveal"><h3>Daire seçimi</h3><p>Kat planı ve cepheyi yerinde inceleyin.</p></div>
+      <div class="reveal"><h3>Şeffaf sözleşme</h3><p>Ödeme ve teslim tarihi yazılı olarak.</p></div>
+      <div class="reveal"><h3>Anahtar teslim</h3><p>Teslimden sonra da yanınızdayız.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. GRUP ŞİRKETLERİ -->
+<div class="group">
+  <p>Mais Grup çatısı altındaki şirketler</p>
+  <div class="mq"><div class="mq-t">
+    <a href="https://mebalife.com.tr" target="_blank" rel="noopener"><img src="https://www.maisgrup.com/wp-content/uploads/2025/02/Group-52.png" alt="Mebalife web sitesi"></a><img src="https://www.maisgrup.com/wp-content/uploads/2025/02/Group-150.png" alt="Şanlıbayrak"><img src="https://www.maisgrup.com/wp-content/uploads/2025/02/Group-93.png" alt="Naavy"><img src="https://www.maisgrup.com/wp-content/uploads/2025/02/Group-165-2.png" alt="Mais Grup">
+    <a href="https://mebalife.com.tr" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://www.maisgrup.com/wp-content/uploads/2025/02/Group-52.png" alt=""></a><img src="https://www.maisgrup.com/wp-content/uploads/2025/02/Group-150.png" alt="" aria-hidden="true"><img src="https://www.maisgrup.com/wp-content/uploads/2025/02/Group-93.png" alt="" aria-hidden="true"><img src="https://www.maisgrup.com/wp-content/uploads/2025/02/Group-165-2.png" alt="" aria-hidden="true">
+  </div></div>
+</div>
+
+<!-- 10. KURUCULAR: yüz göstermek güveni artırır -->
+<section id="kurucular">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Kurucularımız</span><h2>İmzamızın <span class="serif">arkasındaki</span> isimler</h2></div>
+    <div class="team">
+      <div class="member reveal"><div class="ph">Fotoğraf eklenecek</div><div><h3>Ad Soyad</h3><span>Kurucu · Yönetim Kurulu Başkanı</span></div></div>
+      <div class="member reveal"><div class="ph">Fotoğraf eklenecek</div><div><h3>Ad Soyad</h3><span>Kurucu Ortak · İnşaat Mühendisi</span></div></div>
+      <div class="member reveal"><div class="ph">Fotoğraf eklenecek</div><div><h3>Ad Soyad</h3><span>Kurucu Ortak · Mimar</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. BLOG: SEO motoru -->
+<section id="blog" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="eyebrow">Mais Blog</span><h2>Ev alırken <span class="serif">bilmeniz</span> gerekenler</h2></div><a href="#" class="btn btn-dark">Tüm Yazılar <span class="arrow">→</span></a></div>
+    <div class="blog">
+      <a class="post reveal" href="#"><img src="https://www.maisgrup.com/wp-content/uploads/2024/05/photo-4.jpg" alt="" loading="lazy"><div><small>Rehber</small><h3>Depreme dayanıklı bina nasıl anlaşılır? 7 kontrol noktası</h3></div></a>
+      <a class="post reveal" href="#"><img src="https://www.maisgrup.com/wp-content/uploads/2024/07/SAMLAR-1-1000x562.jpg" alt="" loading="lazy"><div><small>Yatırım</small><h3>Başakşehir'de konut yatırımı: 2026 bölge analizi</h3></div></a>
+      <a class="post reveal" href="#"><img src="https://www.maisgrup.com/wp-content/uploads/2024/07/CENNET-1000x800.jpeg" alt="" loading="lazy"><div><small>Tasarım</small><h3>Küçük metrekarede ferah iç mekân için 5 öneri</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 12. İLETİŞİM -->
+<section class="contact" id="iletisim">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">İletişim</span><h2>Hayalinizdeki evi <span class="serif">konuşalım</span></h2><p class="lead">24 saat içinde dönüş yapıyoruz.</p></div>
+    <div class="ct-g">
+      <div class="ct-info reveal">
+        <a href="tel:+902125416163"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg></div><div><small>Telefon</small>0212 541 61 63 · 0212 541 61 64</div></a>
+        <a href="mailto:info@maisgrup.com"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><small>E-posta</small>info@maisgrup.com</div></a>
+        <div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-12a7 7 0 0114 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div><small>Ofis</small>Yenibosna Merkez Mah. 1. Asena Sk. Erol Ertaş İş Mrk. No:9 K:3 Bahçelievler / İstanbul</div></div>
+        <div class="map"><iframe loading="lazy" title="Mais Grup ofis konumu" src="https://maps.google.com/maps?q=Erol%20Erta%C5%9F%20%C4%B0%C5%9F%20Merkezi%20Yenibosna&z=15&output=embed"></iframe></div>
+      </div>
+      <form class="reveal" onsubmit="event.preventDefault();this.querySelector('button').textContent='Teşekkürler, size döneceğiz ✓'">
+        <div><label for="n">Ad Soyad</label><input id="n" required></div>
+        <div><label for="t">Telefon</label><input id="t" type="tel" required></div>
+        <div class="full"><label for="pr">İlgilendiğiniz proje</label><select id="pr"><option>Yenimahalle Toplu Konut</option><option>Şamlar Özel Malikane</option><option>Şamlar Ana Villa</option><option>Henüz karar vermedim</option></select></div>
+        <div class="full"><label for="msg">Mesajınız</label><textarea id="msg" rows="4"></textarea></div>
+        <label class="kvkk full"><input type="checkbox" required> KVKK Aydınlatma Metni'ni okudum, iletişim için verilerimin işlenmesini kabul ediyorum.</label>
+        <div class="full"><button class="btn btn-primary" style="width:100%;justify-content:center">Bilgi Talebi Gönder</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div><img src="assets/logo.png" alt="Mais Grup"><p>Yaşamın ötesine.</p></div>
+      <div><h4>Kurumsal</h4><ul><li><a href="#hakkimizda">Hakkımızda</a></li><li><a href="#kurucular">Kurucularımız</a></li><li><a href="#guven">Kalite Politikası</a></li><li><a href="#">Kariyer</a></li></ul></div>
+      <div><h4>Projeler</h4><ul><li><a href="#projeler">Devam Eden</a></li><li><a href="#projeler">Tamamlanan</a></li><li><a href="#ilerleme">İnşaat Takibi</a></li></ul></div>
+      <div><h4>Takip Edin</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">YouTube</a></li></ul></div>
+    </div>
+    <div class="fb"><span>© 2026 Mais Grup A.Ş. Tüm hakları saklıdır.</span><span><a href="#">KVKK</a> · <a href="#">Çerez Politikası</a></span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/902125416163" aria-label="WhatsApp ile yazın"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+// Navbar scroll durumu
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
+document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+
+// Hero ilerleme çubuğu
+setTimeout(()=>document.querySelectorAll('[data-w]').forEach(e=>e.style.width=e.dataset.w+'%'),400);
+
+// Scroll reveal + sayaçlar
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('[data-c]').forEach(c=>{
+    const end=+c.dataset.c,t0=performance.now();
+    const step=t=>{const k=Math.min((t-t0)/1600,1);c.textContent=Math.round(end*(1-Math.pow(1-k,3))).toLocaleString('tr-TR');if(k<1)requestAnimationFrame(step)};
+    requestAnimationFrame(step);
+  });
+  io.unobserve(e.target);
+}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+
+// Proje filtresi
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.s!==b.dataset.f));
+});
+
+// Hakkımızda sekmeleri
+const tb=document.querySelectorAll('.tabs button'),tp=document.querySelectorAll('.tabp');
+tb.forEach(b=>b.onclick=()=>{tb.forEach(x=>x.classList.toggle('on',x===b));tp.forEach((p,i)=>p.classList.toggle('on',i==b.dataset.t))});
+
+// İnşaat takibi
+const P=[
+  {n:'Yenimahalle Toplu Konut',p:68,s:[['Ruhsat & zemin etüdü','Oca 2025','ok'],['Hafriyat & temel','Nis 2025','ok'],['Kaba inşaat','Devam ediyor · 14/18 kat','now'],['İnce işler & cephe','Planlanan: Ara 2026',''],['Peyzaj & sosyal alanlar','Planlanan: Nis 2027',''],['Anahtar teslim','Haz 2027','']]},
+  {n:'Şamlar Özel Malikane',p:42,s:[['Ruhsat & zemin etüdü','Haz 2025','ok'],['Hafriyat & temel','Eyl 2025','ok'],['Kaba inşaat','Devam ediyor','now'],['İnce işler','Planlanan: Mar 2027',''],['Anahtar teslim','Eki 2027','']]},
+  {n:'Şamlar Ana Villa',p:5,s:[['Proje & ruhsat','Devam ediyor','now'],['Hafriyat & temel','Planlanan: Şub 2027',''],['Kaba inşaat','Planlanan: 2027',''],['Anahtar teslim','2028','']]}
+];
+const ring=document.getElementById('ring');
+function showP(i){
+  const d=P[i];
+  document.getElementById('trkName').textContent=d.n;
+  document.getElementById('ringT').textContent='%'+d.p;
+  ring.style.background=`conic-gradient(#E7B98C ${d.p}%, rgba(255,255,255,.1) 0)`;
+  document.getElementById('steps').innerHTML=d.s.map(s=>`<li class="${s[2]}"><b>${s[0]}</b><small>${s[1]}</small></li>`).join('');
+  document.querySelectorAll('#trkSel button').forEach(b=>b.classList.toggle('on',b.dataset.i==i));
+}
+document.querySelectorAll('#trkSel button').forEach(b=>b.onclick=()=>showP(+b.dataset.i));
+showP(0);
+</script>
+</body>
+</html>
